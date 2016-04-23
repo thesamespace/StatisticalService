@@ -11,14 +11,14 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:focusableInTouchMode="true">
+            android:focusableInTouchMode="true"
+            android:padding="16dp">
 
             <TableRow>
 
                 <TextView
                     style="@style/MemberInfoTable_tv"
-                    android:text="BLE name：" />
+                    android:text="@string/日期" />
 
                 <EditText style="@style/MemberInfoTable_edt" />
             </TableRow>
@@ -27,7 +27,7 @@
 
                 <TextView
                     style="@style/MemberInfoTable_tv"
-                    android:text="BLE ID：" />
+                    android:text="@string/岗位编号" />
 
                 <EditText style="@style/MemberInfoTable_edt" />
             </TableRow>
@@ -36,7 +36,87 @@
 
                 <TextView
                     style="@style/MemberInfoTable_tv"
-                    android:text="BLE ID：" />
+                    android:text="@string/员工所属组" />
+
+                <EditText style="@style/MemberInfoTable_edt" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/MemberInfoTable_tv"
+                    android:text="员工类" />
+
+                <EditText style="@style/MemberInfoTable_edt" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/MemberInfoTable_tv"
+                    android:text="竞岗信息" />
+
+                <EditText style="@style/MemberInfoTable_edt" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/MemberInfoTable_tv"
+                    android:text="路段" />
+
+                <EditText style="@style/MemberInfoTable_edt" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/MemberInfoTable_tv"
+                    android:text="所属岗位" />
+
+                <EditText style="@style/MemberInfoTable_edt" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/MemberInfoTable_tv"
+                    android:text="班次" />
+
+                <EditText style="@style/MemberInfoTable_edt" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/MemberInfoTable_tv"
+                    android:text="工号" />
+
+                <EditText style="@style/MemberInfoTable_edt" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    style="@style/MemberInfoTable_tv"
+                    android:text="指标信息" />
+
+                <EditText style="@style/MemberInfoTable_edt" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/MemberInfoTable_tv"
+                    android:text="结算现金" />
+
+                <EditText style="@style/MemberInfoTable_edt" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/MemberInfoTable_tv"
+                    android:text="指标对比" />
 
                 <EditText style="@style/MemberInfoTable_edt" />
             </TableRow>

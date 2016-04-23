@@ -1,4 +1,4 @@
-package com.example.thesamespace.statisticalservice.main;
+package com.example.thesamespace.statisticalservice.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -56,7 +56,7 @@ public class MemberListAdapter extends BaseAdapter {
         }
         holder.img_head.setImageResource(R.drawable.user);
         holder.tv_name.setText(memberList.get(position).getMemberName());
-        holder.tv_number.setText("工号：" + memberList.get(position).getNumber());
+        holder.tv_number.setText("工号：" + memberList.get(position).getNumber() + "");
         holder.tv_type.setText("类型：" + memberList.get(position).getType());
         return convertView;
     }

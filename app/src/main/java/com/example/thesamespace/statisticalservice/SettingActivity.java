@@ -1,4 +1,4 @@
-package com.example.thesamespace.statisticalservice.setting;
+package com.example.thesamespace.statisticalservice;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.example.thesamespace.statisticalservice.R;
+import com.example.thesamespace.statisticalservice.setting.SettingData;
 
 public class SettingActivity extends AppCompatActivity implements View.OnClickListener {
     private SettingData settingData;

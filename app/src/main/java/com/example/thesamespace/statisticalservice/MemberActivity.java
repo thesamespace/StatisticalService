@@ -10,13 +10,12 @@ import android.widget.RadioGroup;
 
 import com.example.thesamespace.statisticalservice.fragment.FragmentCalendar;
 import com.example.thesamespace.statisticalservice.fragment.FragmentMemberInfoTable;
+import com.example.thesamespace.statisticalservice.fragment.FragmentMemberPhone;
 
 /**
  * Created by thesamespace on 2016/4/22.
  */
-public class MemberActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
-    private FragmentMemberInfoTable fragmentMemberInfoTable;
-    private FragmentCalendar fragmentCalendar;
+public class MemberActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,11 +30,8 @@ public class MemberActivity extends AppCompatActivity implements RadioGroup.OnCh
         img_back.setOnClickListener(this);
         img_edit.setOnClickListener(this);
 
-        RadioGroup radg_tabGroup = (RadioGroup) findViewById(R.id.radg_tabGroup);
-        radg_tabGroup.setOnCheckedChangeListener(this);
-        RadioButton rad_item01 = (RadioButton) findViewById(R.id.rad_item01);
-        rad_item01.setChecked(true);
-
+        FragmentMemberPhone fragmentMemberPhone = new FragmentMemberPhone();
+        getFragmentManager().beginTransaction().add(R.id.fly_member, fragmentMemberPhone).commit();
     }
 
     @Override
@@ -49,36 +45,4 @@ public class MemberActivity extends AppCompatActivity implements RadioGroup.OnCh
                 break;
         }
     }
-
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-        FragmentTransaction fTransaction = getFragmentManager().beginTransaction();
-        hideAllFragments(fTransaction);
-        switch (checkedId) {
-            case R.id.rad_item01:
-                if (fragmentMemberInfoTable == null) {
-                    fragmentMemberInfoTable = new FragmentMemberInfoTable("页面1");
-                    fTransaction.add(R.id.fly_content, fragmentMemberInfoTable);
-                } else {
-                    fTransaction.show(fragmentMemberInfoTable);
-                }
-                break;
-            case R.id.rad_item02:
-                if (fragmentCalendar == null) {
-                    fragmentCalendar = new FragmentCalendar("页面2");
-                    fTransaction.add(R.id.fly_content, fragmentCalendar);
-                } else {
-                    fTransaction.show(fragmentCalendar);
-                }
-                break;
-        }
-        fTransaction.commit();
-    }
-
-    private void hideAllFragments(FragmentTransaction fragmentTransaction) {
-        if (fragmentMemberInfoTable != null) fragmentTransaction.hide(fragmentMemberInfoTable);
-        if (fragmentCalendar != null) fragmentTransaction.hide(fragmentCalendar);
-    }
-
-
 }

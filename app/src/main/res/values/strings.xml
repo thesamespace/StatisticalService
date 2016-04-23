@@ -11,4 +11,7 @@
     <string name="error_incorrect_password">密码错误</string>
     <string name="error_field_required">必填</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="日期">日期</string>
+    <string name="岗位编号">岗位编号</string>
+    <string name="员工所属组">员工所属组</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.thesamespace.statisticalservice.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,6 +16,11 @@ import com.example.thesamespace.statisticalservice.R;
 public class FragmentMemberInfoTable extends Fragment {
     private String content;
 
+    public FragmentMemberInfoTable() {
+
+    }
+
+    @SuppressLint("ValidFragment")
     public FragmentMemberInfoTable(String content) {
         this.content = content;
     }

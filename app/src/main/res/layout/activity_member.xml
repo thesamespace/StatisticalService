@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_height="50dp"
         android:background="@color/color_titlebg">
 
         <ImageView
@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:layout_weight="6"
             android:gravity="center"
-            android:text="个人信息"
+            android:text="组员信息"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <ImageView
@@ -32,48 +32,10 @@
             android:src="@drawable/setting" />
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/fly_member"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <RadioGroup
-            android:id="@+id/radg_tabGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/color_tab_item_unchecked">
-
-            <RadioButton
-                android:id="@+id/rad_item01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_tap_item_bg"
-                android:button="@null"
-                android:drawableLeft="@drawable/user"
-                android:drawablePadding="5dp"
-                android:gravity="center"
-                android:padding="16dp"
-                android:text="设置项目1" />
-
-            <RadioButton
-                android:id="@+id/rad_item02"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_tap_item_bg"
-                android:button="@null"
-                android:drawableLeft="@drawable/add"
-                android:drawablePadding="5dp"
-                android:gravity="center"
-                android:padding="16dp"
-                android:text="设置项目2" />
-        </RadioGroup>
-
-        <FrameLayout
-            android:id="@+id/fly_content"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </FrameLayout>
-    </LinearLayout>
+    </FrameLayout>
 </LinearLayout>

@@ -13,22 +13,23 @@ import com.example.thesamespace.statisticalservice.R;
 /**
  * Created by thesamespace on 2016/4/23.
  */
-public class FragmentCalendar extends Fragment {
+public class FragmentMemberTablet extends Fragment {
+
     private String content;
 
-    public FragmentCalendar() {
+    public FragmentMemberTablet() {
 
     }
 
     @SuppressLint("ValidFragment")
-    public FragmentCalendar(String content) {
+    public FragmentMemberTablet(String content) {
         this.content = content;
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_calendar, container, false);
+        View view = inflater.inflate(R.layout.fragment_member_tablet, container, false);
         return view;
     }
 }

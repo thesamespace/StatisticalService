@@ -1,11 +1,8 @@
-package com.example.thesamespace.statisticalservice.initilize;
+package com.example.thesamespace.statisticalservice;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
-import com.example.thesamespace.statisticalservice.login.LoginActivity;
-import com.example.thesamespace.statisticalservice.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

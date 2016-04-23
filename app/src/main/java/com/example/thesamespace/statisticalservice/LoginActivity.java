@@ -1,4 +1,4 @@
-package com.example.thesamespace.statisticalservice.login;
+package com.example.thesamespace.statisticalservice;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,10 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
-import com.example.thesamespace.statisticalservice.MemberActivity;
-import com.example.thesamespace.statisticalservice.R;
-import com.example.thesamespace.statisticalservice.main.MainActivity;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * A login screen that offers login via email/password.
@@ -40,10 +40,23 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_login:
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                finish();
+                login();
                 break;
         }
+    }
+
+    private void login() {
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                finish();
+            }
+        };
+        Timer timer = new Timer();
+        timer.schedule(timerTask, 2000);
+        ProgressBar progressBar = (ProgressBar) findViewById(R.id.prgb_loginWait);
+        progressBar.setVisibility(View.VISIBLE);
     }
 }
 
