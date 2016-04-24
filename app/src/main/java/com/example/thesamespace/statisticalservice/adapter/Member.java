@@ -1,9 +1,11 @@
 package com.example.thesamespace.statisticalservice.adapter;
 
+import java.io.Serializable;
+
 /**
  * Created by thesamespace on 2016/4/23.
  */
-public class Member {
+public class Member implements Serializable {
     private int group;
     private float workTimeHours;
     private float workTimeDays;

@@ -4,13 +4,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:background="@color/colorAccent">
+        android:layout_weight="2">
 
-    </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <android.support.v4.view.PagerTitleStrip
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/color_light_green"
+                android:padding="7dp">
+
+            </android.support.v4.view.PagerTitleStrip>
+        </android.support.v4.view.ViewPager>
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img_lastLoad"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:src="@drawable/arrow_r" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img_nextLoad"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:src="@drawable/arrow_l" />-->
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,9 +56,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/selector_edt_bg"
-            android:hint="搜索组员"
-            android:padding="10dp" />
+            android:background="@drawable/selector_edt_search_bg"
+            android:hint="请输入您要搜索的姓名"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textAppearance="?android:textAppearanceSmall" />
 
         <ImageView
             android:id="@+id/img_addMember"

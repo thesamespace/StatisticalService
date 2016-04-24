@@ -4,80 +4,96 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <CalendarView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-
-    </CalendarView>
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <TableRow android:padding="10dp">
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendar_workTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:text="日期" />
+            </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
 
-                <TextView
-                    android:layout_weight="1"
-                    android:text="2016年4月20日" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            </TableRow>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <TableRow android:padding="10dp">
+                    <TableRow android:padding="10dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:text="上班时间" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="日期" />
 
-                <TextView
-                    android:layout_weight="1"
-                    android:text="8小时" />
+                        <TextView
+                            android:id="@+id/tv_selectedDay"
+                            android:layout_weight="1"
+                            android:text="2016年4月20日" />
 
-            </TableRow>
+                    </TableRow>
 
-            <TableRow android:padding="10dp">
+                    <TableRow android:padding="10dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:text="上班超时" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="上班时间" />
 
-                <TextView
-                    android:layout_weight="1"
-                    android:text="2小时" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="8小时" />
 
-            </TableRow>
+                    </TableRow>
 
-            <TableRow android:padding="10dp">
+                    <TableRow android:padding="10dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:text="法定假上班" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="上班超时" />
 
-                <TextView
-                    android:layout_weight="1"
-                    android:text="0小时" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="2小时" />
 
-            </TableRow>
+                    </TableRow>
 
-            <TableRow android:padding="10dp">
+                    <TableRow android:padding="10dp">
 
-                <TextView
-                    android:layout_weight="1"
-                    android:text="法定假上班超时" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="法定假上班" />
 
-                <TextView
-                    android:layout_weight="1"
-                    android:text="0小时" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="0小时" />
 
-            </TableRow>
-        </TableLayout>
-    </LinearLayout>
+                    </TableRow>
+
+                    <TableRow android:padding="10dp">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="法定假上班超时" />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="0小时" />
+
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>

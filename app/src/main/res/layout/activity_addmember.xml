@@ -4,4 +4,79 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_titlebg">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:src="@drawable/arrow_l" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:text="添加组员"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ImageView
+            android:id="@+id/img_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:src="@drawable/setting"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TableRow>
+
+            <TextView
+                style="@style/MemberInfoTable_tv"
+                android:text="姓名" />
+
+            <EditText
+                android:id="@+id/edt_memberName"
+                style="@style/MemberInfoTable_edt" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/MemberInfoTable_tv"
+                android:text="工号" />
+
+            <EditText
+                android:id="@+id/edt_number"
+                style="@style/MemberInfoTable_edt" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/MemberInfoTable_tv"
+                android:text="类型" />
+
+            <EditText
+                android:id="@+id/edt_type"
+                style="@style/MemberInfoTable_edt" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_addMember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/selector_btn_bg"
+        android:text="添加" />
 </LinearLayout>

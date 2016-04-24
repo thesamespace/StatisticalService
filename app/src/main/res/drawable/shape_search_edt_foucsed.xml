@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/color_edt_unfouced" />
-    <corners android:radius="@dimen/radius_edt"/>
+    <solid android:color="@color/color_edt_fouced" />
+    <corners android:radius="@dimen/radius_edt_search" />
     <stroke
         android:width="@dimen/stroke_edt"
         android:color="@color/color_edt_shorke" />

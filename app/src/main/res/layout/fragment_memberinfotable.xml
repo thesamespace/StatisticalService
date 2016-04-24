@@ -94,6 +94,7 @@
 
                 <EditText style="@style/MemberInfoTable_edt" />
             </TableRow>
+
             <TableRow>
 
                 <TextView

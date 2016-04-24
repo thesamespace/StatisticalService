@@ -9,29 +9,33 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
-import com.example.thesamespace.statisticalservice.MemberActivity;
 import com.example.thesamespace.statisticalservice.R;
+import com.example.thesamespace.statisticalservice.adapter.Member;
 
 /**
  * Created by thesamespace on 2016/4/23.
  */
-public class FragmentMemberPhone extends Fragment implements RadioGroup.OnCheckedChangeListener {
+public class FragmentMemberPhone extends Fragment implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
     private Context context;
-    private String content;
+    private Member member;
     private FragmentMemberInfoTable fragmentMemberInfoTable;
     private FragmentCalendar fragmentCalendar;
+    private TextView tv_memberName;
 
-    public FragmentMemberPhone() {
+    @SuppressLint("ValidFragment")
+    FragmentMemberPhone() {
 
     }
 
     @SuppressLint("ValidFragment")
-    public FragmentMemberPhone(Context context, String content) {
+    public FragmentMemberPhone(Member member) {
         this.context = context;
-        this.content = content;
+        this.member = member;
     }
 
     @Nullable
@@ -43,6 +47,17 @@ public class FragmentMemberPhone extends Fragment implements RadioGroup.OnChecke
         radg_tabGroup.setOnCheckedChangeListener(this);
         RadioButton rad_item01 = (RadioButton) view.findViewById(R.id.rad_item01);
         rad_item01.setChecked(true);
+
+        ImageView img_back = (ImageView) view.findViewById(R.id.img_back);
+        ImageView img_edit = (ImageView) view.findViewById(R.id.img_edit);
+        if (img_back != null) {
+            img_back.setOnClickListener(this);
+        }
+        if (img_edit != null) {
+            img_edit.setOnClickListener(this);
+        }
+        tv_memberName = (TextView) view.findViewById(R.id.tv_memberName);
+        tv_memberName.setText(member.getMemberName());
         return view;
     }
 
@@ -53,7 +68,7 @@ public class FragmentMemberPhone extends Fragment implements RadioGroup.OnChecke
         switch (checkedId) {
             case R.id.rad_item01:
                 if (fragmentMemberInfoTable == null) {
-                    fragmentMemberInfoTable = new FragmentMemberInfoTable("页面1");
+                    fragmentMemberInfoTable = new FragmentMemberInfoTable();
                     fTransaction.add(R.id.fly_content, fragmentMemberInfoTable);
                 } else {
                     fTransaction.show(fragmentMemberInfoTable);
@@ -61,7 +76,7 @@ public class FragmentMemberPhone extends Fragment implements RadioGroup.OnChecke
                 break;
             case R.id.rad_item02:
                 if (fragmentCalendar == null) {
-                    fragmentCalendar = new FragmentCalendar("页面2");
+                    fragmentCalendar = new FragmentCalendar();
                     fTransaction.add(R.id.fly_content, fragmentCalendar);
                 } else {
                     fTransaction.show(fragmentCalendar);
@@ -74,5 +89,12 @@ public class FragmentMemberPhone extends Fragment implements RadioGroup.OnChecke
     private void hideAllFragments(FragmentTransaction fragmentTransaction) {
         if (fragmentMemberInfoTable != null) fragmentTransaction.hide(fragmentMemberInfoTable);
         if (fragmentCalendar != null) fragmentTransaction.hide(fragmentCalendar);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+
+        }
     }
 }
