@@ -25,7 +25,6 @@ public class FragmentMemberPhone extends Fragment implements RadioGroup.OnChecke
     private Member member;
     private FragmentMemberInfoTable fragmentMemberInfoTable;
     private FragmentCalendar fragmentCalendar;
-    private TextView tv_memberName;
 
     @SuppressLint("ValidFragment")
     FragmentMemberPhone() {
@@ -34,7 +33,6 @@ public class FragmentMemberPhone extends Fragment implements RadioGroup.OnChecke
 
     @SuppressLint("ValidFragment")
     public FragmentMemberPhone(Member member) {
-        this.context = context;
         this.member = member;
     }
 
@@ -42,22 +40,10 @@ public class FragmentMemberPhone extends Fragment implements RadioGroup.OnChecke
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_member_phone, container, false);
-
         RadioGroup radg_tabGroup = (RadioGroup) view.findViewById(R.id.radg_tabGroup);
         radg_tabGroup.setOnCheckedChangeListener(this);
         RadioButton rad_item01 = (RadioButton) view.findViewById(R.id.rad_item01);
         rad_item01.setChecked(true);
-
-        ImageView img_back = (ImageView) view.findViewById(R.id.img_back);
-        ImageView img_edit = (ImageView) view.findViewById(R.id.img_edit);
-        if (img_back != null) {
-            img_back.setOnClickListener(this);
-        }
-        if (img_edit != null) {
-            img_edit.setOnClickListener(this);
-        }
-        tv_memberName = (TextView) view.findViewById(R.id.tv_memberName);
-        tv_memberName.setText(member.getMemberName());
         return view;
     }
 
@@ -94,7 +80,6 @@ public class FragmentMemberPhone extends Fragment implements RadioGroup.OnChecke
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-
         }
     }
 }

@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
+import com.loopj.android.image.SmartImageView;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -18,7 +20,6 @@ import java.util.TimerTask;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText edt_userName;
     private EditText edt_passWord;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Timer timer = new Timer();
         timer.schedule(timerTask, 2000);
         ProgressBar progressBar = (ProgressBar) findViewById(R.id.prgb_loginWait);
-        progressBar.setVisibility(View.VISIBLE);
+        if (progressBar != null) {
+            progressBar.setVisibility(View.VISIBLE);
+        }
     }
 }
 

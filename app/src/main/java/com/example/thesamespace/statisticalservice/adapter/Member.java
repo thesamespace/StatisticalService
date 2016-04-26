@@ -10,11 +10,13 @@ public class Member implements Serializable {
     private float workTimeHours;
     private float workTimeDays;
     private String memberName;
+    private String headImgUrl;
     private int number;
     private String type;
 
-    public Member(String memberName, int number, String type) {
+    public Member(String memberName, String headImgUrl, int number, String type) {
         this.memberName = memberName;
+        this.headImgUrl = headImgUrl;
         this.number = number;
         this.type = type;
     }
@@ -65,5 +67,13 @@ public class Member implements Serializable {
 
     public void setWorkTimeDays(float workTimeDays) {
         this.workTimeDays = workTimeDays;
+    }
+
+    public String getHeadImgUrl() {
+        return headImgUrl;
+    }
+
+    public void setHeadImgUrl(String headImgUrl) {
+        this.headImgUrl = headImgUrl;
     }
 }

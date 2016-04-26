@@ -5,12 +5,12 @@
     android:orientation="horizontal"
     android:padding="5dp">
 
-    <ImageView
-        android:id="@+id/img_head"
+    <com.loopj.android.image.SmartImageView
+        android:id="@+id/smartimg_head"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:src="@drawable/user" />
+        android:scaleType="fitXY"
+        android:layout_weight="3" />
 
     <LinearLayout
         android:layout_width="match_parent"
