@@ -1,15 +1,12 @@
 package com.example.thesamespace.statisticalservice;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-
-import com.loopj.android.image.SmartImageView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -50,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                startActivity(new Intent(LoginActivity.this, MainActivity2.class));
                 finish();
             }
         };

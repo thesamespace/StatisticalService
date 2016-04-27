@@ -1,80 +1,40 @@
 package com.example.thesamespace.statisticalservice;
 
-import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.example.thesamespace.statisticalservice.adapter.LoadPagerAdapter;
 import com.example.thesamespace.statisticalservice.adapter.Member;
-import com.example.thesamespace.statisticalservice.adapter.MemberListAdapter;
 import com.loopj.android.image.SmartImageView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by thesamespace on 2016/4/23.
  */
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnClickListener, ViewPager.OnPageChangeListener {
+public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
     ListView lv_memberList;
-    private LoadPagerAdapter loadPagerAdapter = new LoadPagerAdapter();
-    private ViewPager vp_pager;
-    MemberListAdapter memberListAdapter;
+    SmartImageView smartImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         initView();
-        initPager();
     }
 
     private void initView() {
-        lv_memberList = (ListView) findViewById(R.id.lv_memberList);
-        memberListAdapter = new MemberListAdapter(MainActivity.this, getMemberList(0));
-        lv_memberList.setAdapter(memberListAdapter);
-        lv_memberList.setOnItemClickListener(this);
-
         ImageView img_addMember = (ImageView) findViewById(R.id.img_addMember);
         if (img_addMember != null) {
             img_addMember.setOnClickListener(this);
         }
-    }
-
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-    private void initPager() {
-        vp_pager = (ViewPager) findViewById(R.id.vp_pager);
-        for (Load load : getLoadList()) {
-            SmartImageView smartImageView = new SmartImageView(this);
-            smartImageView.setImageUrl(load.getLoadImgUrl());
-            smartImageView.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
-            smartImageView.setScaleType(SmartImageView.ScaleType.FIT_XY);
-            loadPagerAdapter.addItem(load.getLoadName(), smartImageView);
-        }
-
-        if (vp_pager != null) {
-            vp_pager.setAdapter(loadPagerAdapter);
-            vp_pager.setOnPageChangeListener(this);
-        }
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent = new Intent(MainActivity.this, MemberActivity.class);
-        intent.putExtra("member", (Serializable) parent.getItemAtPosition(position));
-        startActivity(intent);
     }
 
     @Override
@@ -101,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.img_addMember:
-                startActivity(new Intent(MainActivity.this, AddMemberActivity.class));
+                startActivity(new Intent(MainActivity2.this, AddMemberActivity.class));
                 break;
         }
     }
@@ -160,21 +120,4 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return memberList;
     }
 
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-    }
-
-    @Override
-    public void onPageSelected(int position) {
-
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
-        if (state == 2) {
-            memberListAdapter = new MemberListAdapter(MainActivity.this, getMemberList(vp_pager.getCurrentItem()));
-            lv_memberList.setAdapter(memberListAdapter);
-        }
-    }
 }

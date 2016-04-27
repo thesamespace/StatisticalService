@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_edt_unfouced"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="工号:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_edt_search_bg"
+                    android:gravity="center"
+                    android:hint="请输入工号"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_btn_bg"
+                    android:text="确定"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/color_edt_unfouced"
+                android:minHeight="100dp"
+                android:padding="16dp">
+
+                <com.loopj.android.image.SmartImageView
+                    android:id="@+id/img_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:singleLine="true"
+                        android:text="姓名"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="岗位："
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="工号："
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="类型："
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_edt_unfouced"
+                android:padding="16dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="日期"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <EditText
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2016年4月20日"
+                        android:textAppearance="?android:textAppearanceLarge" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="工作时间"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <EditText
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="12小时"
+                        android:textAppearance="?android:textAppearanceLarge" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="结算金额(元)"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <EditText
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="400.5"
+                        android:textAppearance="?android:textAppearanceLarge" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="班次"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <EditText
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="晚班"
+                        android:textAppearance="?android:textAppearanceLarge" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="竞岗信息"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <EditText
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="竞"
+                        android:textAppearance="?android:textAppearanceLarge" />
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/selector_btn_bg"
+                android:text="确定录入"
+                android:textAppearance="?android:textAppearanceLarge" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
