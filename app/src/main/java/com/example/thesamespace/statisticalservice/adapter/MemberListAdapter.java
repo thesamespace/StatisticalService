@@ -68,7 +68,7 @@ public class MemberListAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         holder.img_head.setImageUrl(memberList.get(position).getHeadImgUrl(), R.drawable.loading);
-        holder.tv_name.setText(memberList.get(position).getMemberName());
+        holder.tv_name.setText((memberList.get(position).getGroupID() + 1) + "组 " + memberList.get(position).getMemberName());
         holder.tv_number.setText("工号：" + memberList.get(position).getNumber() + "");
         holder.tv_type.setText("类型：" + memberList.get(position).getType());
         return convertView;

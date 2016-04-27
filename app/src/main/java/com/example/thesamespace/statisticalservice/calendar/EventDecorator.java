@@ -1,4 +1,4 @@
-package com.example.thesamespace.statisticalservice;
+package com.example.thesamespace.statisticalservice.calendar;
 
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;

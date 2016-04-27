@@ -9,8 +9,8 @@
         android:id="@+id/smartimg_head"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:layout_weight="3" />
+        android:layout_weight="3"
+        android:scaleType="fitXY" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="唐美嫦"
+            android:text="组员名"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -40,4 +40,9 @@
             android:layout_height="wrap_content"
             android:text="员工类型：A类" />
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/arrow_r" />
 </LinearLayout>

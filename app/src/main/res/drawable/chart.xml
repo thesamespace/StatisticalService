@@ -3,7 +3,7 @@
     android:height="24dp"
     android:viewportHeight="376"
     android:viewportWidth="376">
-    <group>
+    <groupID>
         <path
             android:fillColor="#9FBF3B"
             android:pathData="
@@ -54,5 +54,5 @@
             android:fillColor="#9FBF3B"
             android:pathData="M29.758,77.126h316.484c0.553,0,1-0.448,1-1c0-0.552-0.447-1-1-1H29.758c-0.553,0-1,0.448-1,1
 		C28.758,76.678,29.205,77.126,29.758,77.126z" />
-        </group>
+        </groupID>
 </vector>

@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.thesamespace.statisticalservice.EventDecorator;
+import com.example.thesamespace.statisticalservice.calendar.EventDecorator;
 import com.example.thesamespace.statisticalservice.R;
 import com.example.thesamespace.statisticalservice.adapter.Member;
 import com.prolificinteractive.materialcalendarview.CalendarDay;

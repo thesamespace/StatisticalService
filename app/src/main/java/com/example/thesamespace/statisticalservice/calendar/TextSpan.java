@@ -1,4 +1,4 @@
-package com.example.thesamespace.statisticalservice;
+package com.example.thesamespace.statisticalservice.calendar;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;

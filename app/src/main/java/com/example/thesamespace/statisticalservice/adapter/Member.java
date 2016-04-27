@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by thesamespace on 2016/4/23.
  */
 public class Member implements Serializable {
-    private int group;
+    private int groupID;
     private float workTimeHours;
     private float workTimeDays;
     private String memberName;
@@ -14,7 +14,8 @@ public class Member implements Serializable {
     private int number;
     private String type;
 
-    public Member(String memberName, String headImgUrl, int number, String type) {
+    public Member(int groupID, String memberName, String headImgUrl, int number, String type) {
+        this.groupID = groupID;
         this.memberName = memberName;
         this.headImgUrl = headImgUrl;
         this.number = number;
@@ -45,12 +46,12 @@ public class Member implements Serializable {
         this.type = type;
     }
 
-    public int getGroup() {
-        return group;
+    public int getGroupID() {
+        return groupID;
     }
 
-    public void setGroup(int group) {
-        this.group = group;
+    public void setGroupID(int groupID) {
+        this.groupID = groupID;
     }
 
     public float getWorkTimeHours() {

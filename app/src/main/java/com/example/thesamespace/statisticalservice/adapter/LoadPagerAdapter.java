@@ -1,4 +1,4 @@
-package com.example.thesamespace.statisticalservice;
+package com.example.thesamespace.statisticalservice.adapter;
 
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -10,10 +10,10 @@ import java.util.ArrayList;
 /**
  * Created by thesamespace on 2016/4/11.
  */
-public class MainAdapter extends PagerAdapter {
+public class LoadPagerAdapter extends PagerAdapter {
     private ArrayList<PagerItem> pagerItems = new ArrayList<>();
 
-    public MainAdapter() {
+    public LoadPagerAdapter() {
     }
 
     public void addItem(String title,View view){

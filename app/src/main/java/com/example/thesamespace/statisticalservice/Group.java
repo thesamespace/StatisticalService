@@ -9,16 +9,31 @@ import java.util.List;
  * Created by thesamespace on 2016/4/24.
  */
 public class Group {
-    private Member leader;
-    private Load load;
+    private int groupID;
+    private String leaderName;
+    private String loadName;
+    private String loadPicUrl;
     private List<Member> memberList = new ArrayList<>();
 
-    public Member getLeader() {
-        return leader;
+    public Group(int groupID, String leaderName, String loadName) {
+        this.groupID = groupID;
+        this.leaderName = leaderName;
+        this.loadName = loadName;
     }
 
-    public void setLeader(Member leader) {
-        this.leader = leader;
+    public Group(int groupID, String leaderName, String loadName, String loadPicUrl) {
+        this.groupID = groupID;
+        this.leaderName = leaderName;
+        this.loadName = loadName;
+        this.loadPicUrl = loadPicUrl;
+    }
+
+    public String getLeader() {
+        return leaderName;
+    }
+
+    public void setLeader(String leaderName) {
+        this.leaderName = leaderName;
     }
 
     public List<Member> getMemberList() {
@@ -33,11 +48,27 @@ public class Group {
         this.memberList.add(member);
     }
 
-    public Load getLoad() {
-        return load;
+    public String getLoadName() {
+        return loadName;
     }
 
-    public void setLoad(Load load) {
-        this.load = load;
+    public void setLoadName(String loadName) {
+        this.loadName = loadName;
+    }
+
+    public int getGroupID() {
+        return groupID;
+    }
+
+    public void setGroupID(int groupID) {
+        this.groupID = groupID;
+    }
+
+    public String getLoadPicUrl() {
+        return loadPicUrl;
+    }
+
+    public void setLoadPicUrl(String loadPicUrl) {
+        this.loadPicUrl = loadPicUrl;
     }
 }
