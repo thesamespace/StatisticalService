@@ -1,14 +1,14 @@
 package com.example.thesamespace.statisticalservice;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import com.example.thesamespace.statisticalservice.adapter.Member;
 import com.loopj.android.image.SmartImageView;
@@ -20,8 +20,11 @@ import java.util.List;
  * Created by thesamespace on 2016/4/23.
  */
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
-    ListView lv_memberList;
-    SmartImageView smartImageView;
+    private ListView lv_memberList;
+
+    private SmartImageView smartImageView;
+
+    private Spinner sp_workHours;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,25 +38,30 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         if (img_addMember != null) {
             img_addMember.setOnClickListener(this);
         }
+
+        sp_workHours = (Spinner) findViewById(R.id.sp_workHours);
+        String[] strs = new String[]{"8小时", "9小时", "10小时", "11小时", "12小时", "13小时", "14小时"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, strs);
+        sp_workHours.setAdapter(adapter);
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        AlertDialog isExit = new AlertDialog.Builder(this).create();
-        isExit.setTitle("退出提示");
-        isExit.setMessage("确定要退出？");
-        isExit.setButton("是", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finish();
-            }
-        });
-        isExit.setButton2("否", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-        isExit.show();
+//        AlertDialog isExit = new AlertDialog.Builder(this).create();
+//        isExit.setTitle("退出提示");
+//        isExit.setMessage("确定要退出？");
+//        isExit.setButton("是", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                finish();
+//            }
+//        });
+//        isExit.setButton2("否", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//            }
+//        });
+//        isExit.show();
         return super.onKeyDown(keyCode, event);
     }
 
